@@ -58,7 +58,7 @@ ul {
 }
 
 /* Make images easier to work with */
-img,
+/* img, */
 picture,
 label {
   max-width: 100%;
