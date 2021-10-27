@@ -1,0 +1,31 @@
+.carousel {
+  position: relative;
+}
+
+.previous {
+  left: 5%;
+}
+.next {
+  right: 5%;
+}
+
+.next,
+.previous {
+  position: absolute;
+  top: 47%;
+  background-color: var(--White);
+  border-radius: 50%;
+  z-index: 20;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+.next img,
+.previous img {
+  max-width: 0.5rem;
+}
