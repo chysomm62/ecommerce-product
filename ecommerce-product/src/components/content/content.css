@@ -7,12 +7,14 @@
   color: var(--Orange);
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
+  font-weight: 700;
 }
 .c-h2 {
   font-size: 1.75rem;
   line-height: 2rem;
   text-transform: capitalize;
   padding: 1rem 0;
+  font-weight: 700;
 }
 .c-p {
   font-size: 0.9rem;
@@ -46,7 +48,7 @@
 }
 .prices p {
   text-decoration: line-through;
-  color: var(--light-grayish-blue);
+  color: var(--Grayish-blue);
 }
 
 .quantity {
@@ -54,7 +56,7 @@
   width: 100%;
   background-color: var(--Light-grayish-blue);
   color: var(--body-colo);
-  border: 1px solid var(--light-grayish-blue);
+  border: 1px solid var(--Light-grayish-blue);
   border-radius: 0.75rem;
   display: flex;
   justify-content: space-between;

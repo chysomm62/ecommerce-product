@@ -8,7 +8,7 @@ const Header = () => {
         src={imatar}
         alt=""
         style={{
-          maxWidth: "400px",
+          maxWidth: "375px",
         }}
       />
     </div>

@@ -35,11 +35,12 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  max-width: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
-  color: var(--body-colo);
+  color: var(--Very-dark-blue);
   /* font-family: "Ubuntu", sans-serif; */
 }
 
