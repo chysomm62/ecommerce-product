@@ -1,0 +1,66 @@
+.c-div {
+  padding: 1.5rem;
+  text-align: left;
+}
+.c-h1 {
+  text-transform: uppercase;
+  color: var(--Orange);
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+.c-h2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+.c-p {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.quantity {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--Light-grayish-blue);
+  color: var(--body-colo);
+  border: 1px solid var(--light-grayish-blue);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.quantity button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+.quantity span {
+  font-weight: 500;
+}
+
+.addBtn {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--Orange);
+  color: var(--White);
+  border: 1px solid var(--Orange);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.addBtn img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(62%) saturate(2%)
+    hue-rotate(352deg) brightness(1000%) contrast(104%);
+  padding: 0 0.5rem;
+  width: 30px;
+}
+.addBtn span {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}

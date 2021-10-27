@@ -106,3 +106,16 @@ label {
   --White: hsl(0, 0%, 100%);
   --Black-75-opacity-for-lightbox-background: hsl(0, 0%, 0%);
 }
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  .body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

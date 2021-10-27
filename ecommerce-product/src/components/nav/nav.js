@@ -20,7 +20,7 @@ const Nav = () => {
         <img src={hamburger} alt="" className="menu" />
         <img src={logo} alt="logo" className="logo" />
       </div>
-      <MenuLinks />
+      {/* <MenuLinks /> */}
 
       <div className="right-nav">
         <img src={cart} alt="" className="cart" />
