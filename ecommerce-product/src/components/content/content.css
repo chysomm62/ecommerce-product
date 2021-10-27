@@ -19,8 +19,38 @@
   color: var(--Dark-grayish-blue);
 }
 
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+.prices div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.prices div span:first-of-type {
+  font-size: 1.5rem;
+}
+.prices div span:last-of-type {
+  font-size: 0.75rem;
+  padding: 0.35rem;
+  background-color: var(--Pale-orange);
+  line-height: 0.75rem;
+  color: var(--Orange);
+  align-self: center;
+}
+.prices p {
+  text-decoration: line-through;
+  color: var(--light-grayish-blue);
+}
+
 .quantity {
-  padding: 0.5rem;
+  padding: 0.75rem;
   width: 100%;
   background-color: var(--Light-grayish-blue);
   color: var(--body-colo);
@@ -30,6 +60,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 0;
+  font-size: 0.75rem;
 }
 .quantity button {
   border: none;
@@ -37,11 +68,11 @@
   background-color: inherit;
 }
 .quantity span {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .addBtn {
-  padding: 0.5rem;
+  padding: 0.75rem;
   width: 100%;
   background-color: var(--Orange);
   color: var(--White);
@@ -60,7 +91,7 @@
   width: 30px;
 }
 .addBtn span {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
   padding: 0 0.5rem;
 }

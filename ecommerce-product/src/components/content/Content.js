@@ -17,12 +17,17 @@ const Content = () => {
         Featuring a durable rubber outer sole, they’ll withstand everything the
         weather can offer.
       </p>
-      <div className="prices">$125.00 50% $250.00</div>
+      <div className="prices">
+        <div>
+          <span>$125.00</span> <span>50%</span>
+        </div>{" "}
+        <p>$250.00</p>
+      </div>
       <div className="quantity">
         <button>
           <img src={minus} alt="" />
         </button>
-        0
+        <span>0</span>
         <button>
           <img src={plus} alt="" />
         </button>
