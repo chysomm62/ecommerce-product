@@ -13,8 +13,9 @@
   font-size: 1.75rem;
   line-height: 2rem;
   text-transform: capitalize;
-  padding: 1rem 0;
+
   font-weight: 700;
+  line-height: 1.1;
 }
 .c-p {
   font-size: 0.9rem;
@@ -85,6 +86,9 @@
   align-items: center;
   margin: 0.5rem 0;
 }
+.addBtn:hover {
+  opacity: 0.75;
+}
 
 .addBtn img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(62%) saturate(2%)
@@ -98,11 +102,57 @@
   padding: 0 0.5rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .c-div {
-    align-self: center;
-    justify-self: center;
-    height: 100%;
-    padding: 5rem;
+    padding: 0.5rem 1.5rem;
+  }
+  .c-h1 {
+    font-size: 1rem;
+  }
+  .c-h2 {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+  }
+  .c-p {
+    font-size: 1rem;
+  }
+  .prices {
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .prices div {
+    padding: 0.25rem 0;
+  }
+  .prices div span:first-of-type {
+    font-size: 2rem;
+  }
+  .prices div span:last-of-type {
+    font-size: 1rem;
+  }
+  .prices p {
+    font-size: 1.25rem;
+  }
+  .quantity-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quantity {
+    width: 35%;
+    padding: 0.75rem;
+  }
+
+  .addBtn {
+    width: 60%;
+    padding: 0.75rem;
+  }
+  .addBtn img {
+    padding: 0 0.75rem;
+    width: 45px;
+  }
+  .addBtn span {
+    font-size: 1rem;
+    padding: 0 0.75rem;
   }
 }

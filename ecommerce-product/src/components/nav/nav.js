@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import MenuLinks from "./MenuLinks";
 
@@ -11,17 +11,30 @@ import hamburger from "../../images/icon-menu.svg";
 import logo from "../../images/logo.svg";
 import cart from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
+import close from "../../images/icon-close.svg";
 
 const Nav = () => {
+  const [isMobile, setIsMobile] = useState(false);
   return (
     // nav wrap
     <div className="nav">
       <div className="left-nav">
-        <button>
-          <img src={hamburger} alt="" className="menu" />
+        <button onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? (
+            <img src={close} alt="" className="close" />
+          ) : (
+            <img src={hamburger} alt="" className="menu" />
+          )}
         </button>
         <img src={logo} alt="logo" className="logo" />
-        <MenuLinks />
+        <div className={isMobile ? "links-active" : "contain-menu-link"}>
+          <div className="menu-links-wrap" onClick={() => setIsMobile(false)}>
+            <div className="close">
+              <img src={close} alt="" className="close" />
+            </div>
+            <MenuLinks />
+          </div>
+        </div>
       </div>
 
       <div className="right-nav">

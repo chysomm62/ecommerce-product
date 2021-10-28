@@ -23,19 +23,21 @@ const Content = () => {
         </div>{" "}
         <p>$250.00</p>
       </div>
-      <div className="quantity">
-        <button>
-          <img src={minus} alt="" />
-        </button>
-        <span>0</span>
-        <button>
-          <img src={plus} alt="" />
+      <div className="quantity-add">
+        <div className="quantity">
+          <button>
+            <img src={minus} alt="" />
+          </button>
+          <span>0</span>
+          <button>
+            <img src={plus} alt="" />
+          </button>
+        </div>
+        <button className="addBtn">
+          <img src={cart} alt="" />
+          <span>Add to cart</span>
         </button>
       </div>
-      <button className="addBtn">
-        <img src={cart} alt="" />
-        <span>Add to cart</span>
-      </button>
     </div>
   );
 };

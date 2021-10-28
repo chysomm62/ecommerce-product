@@ -29,3 +29,17 @@
 .previous img {
   max-width: 0.5rem;
 }
+
+@media screen and (min-width: 1000px) {
+  .carousel img {
+    border-radius: 1rem;
+  }
+  .next,
+  .previous {
+    display: none;
+  }
+  .next img,
+  .previous img {
+    display: none;
+  }
+}

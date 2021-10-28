@@ -60,6 +60,7 @@
   min-height: 100vh;
   z-index: 50;
   background-color: var(--Black-75-opacity-for-lightbox-background);
+  transition: all 2s ease-out;
 }
 .menu-links-wrap {
   min-height: 100vh;
@@ -79,9 +80,10 @@
 }
 
 /* bigger screens */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .nav {
-    padding: 0;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--Light-grayish-blue);
   }
   .close,
   .menu {
@@ -107,18 +109,23 @@
     padding: 0.1rem;
   }
   .menu-links ul li {
-    padding: 1.5rem;
+    padding: 0 1.25rem;
   }
-  .menu-links ul li:hover {
+  .menu-links ul li > * {
+    padding: 1.5rem 0;
+  }
+  .menu-links ul li > *:hover {
     border-bottom: 2px solid var(--Orange);
+    opacity: 0.75;
+  }
+  .logo {
+    margin-right: 2rem;
   }
   .avatar {
     max-width: 2.5rem;
+    margin-left: 1rem;
   }
   .left-nav button {
     display: none;
   }
-}
-
-@media screen and(min-width:700px) {
 }
