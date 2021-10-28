@@ -7,12 +7,31 @@
 
 .menu {
   width: 1rem;
-  height: auto;
+  align-self: center;
 }
 
 .logo {
-  padding: 0 0 0 1rem;
-  width: 85%;
+  align-self: center;
+  padding: 0 0 0 0.5rem;
+  width: 8rem;
+}
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.right-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+.left-nav button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  display: flex;
+  align-content: center;
 }
 
 .cart {
@@ -30,12 +49,16 @@
 /* menu links */
 
 .contain-menu-link {
+  display: none;
+}
+.links-active {
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100vh;
-  z-index: 5;
+  z-index: 50;
   background-color: var(--Black-75-opacity-for-lightbox-background);
 }
 .menu-links-wrap {
@@ -56,10 +79,46 @@
 }
 
 /* bigger screens */
-
-@media screen and(min-width:700px) {
+@media screen and (min-width: 700px) {
+  .nav {
+    padding: 0;
+  }
   .close,
   .menu {
     display: none;
   }
+  .contain-menu-link {
+    display: block;
+  }
+  .menu-links-wrap {
+    min-height: auto;
+    background-color: inherit;
+    padding: 0.1rem;
+    max-width: auto;
+    max-width: 100%;
+  }
+  .menu-links {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .menu-links ul {
+    display: flex;
+    padding: 0.1rem;
+  }
+  .menu-links ul li {
+    padding: 1.5rem;
+  }
+  .menu-links ul li:hover {
+    border-bottom: 2px solid var(--Orange);
+  }
+  .avatar {
+    max-width: 2.5rem;
+  }
+  .left-nav button {
+    display: none;
+  }
+}
+
+@media screen and(min-width:700px) {
 }

@@ -17,10 +17,12 @@ const Nav = () => {
     // nav wrap
     <div className="nav">
       <div className="left-nav">
-        <img src={hamburger} alt="" className="menu" />
+        <button>
+          <img src={hamburger} alt="" className="menu" />
+        </button>
         <img src={logo} alt="logo" className="logo" />
+        <MenuLinks />
       </div>
-      {/* <MenuLinks /> */}
 
       <div className="right-nav">
         <img src={cart} alt="" className="cart" />

@@ -97,3 +97,12 @@
   font-weight: 600;
   padding: 0 0.5rem;
 }
+
+@media screen and (min-width: 700px) {
+  .c-div {
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    padding: 5rem;
+  }
+}
