@@ -17,14 +17,13 @@ const Header = () => {
             maxWidth: "100%",
           }}
         />
+        <button className="previous">
+          <img src={previous} alt="" />
+        </button>
+        <button className="next">
+          <img src={next} alt="" />
+        </button>
       </div>
-
-      <button className="previous">
-        <img src={previous} alt="" />
-      </button>
-      <button className="next">
-        <img src={next} alt="" />
-      </button>
     </div>
   );
 };

@@ -27,7 +27,10 @@ const Nav = () => {
           )}
         </button>
         <img src={logo} alt="logo" className="logo" />
-        <div className={isMobile ? "links-active" : "contain-menu-link"}>
+        <div
+          className={isMobile ? "links-active" : "contain-menu-link"}
+          onClick={() => setIsMobile(false)}
+        >
           <div className="menu-links-wrap" onClick={() => setIsMobile(false)}>
             <div className="close">
               <img src={close} alt="" className="close" />
