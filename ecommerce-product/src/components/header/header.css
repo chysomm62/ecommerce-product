@@ -1,5 +1,7 @@
 .carousel {
   position: relative;
+  display: flex;
+  overflow-y: hidden;
 }
 
 .previous {
@@ -7,6 +9,16 @@
 }
 .next {
   right: 5%;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide-active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
 
 .next,
@@ -24,6 +36,8 @@
   align-items: center;
   outline: none;
   border: none;
+  user-select: none;
+  cursor: pointer;
 }
 .next img,
 .previous img {

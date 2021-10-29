@@ -1,29 +1,13 @@
 import React from "react";
 
-import imatar from "../../images/image-product-1.jpg";
-import previous from "../../images/icon-previous.svg";
-import next from "../../images/icon-next.svg";
-
 import "./header.css";
+import Carousel from "../carousel/Carousel";
+import { CarouselData } from "../carousel/CarouselData";
 
 const Header = () => {
   return (
     <div>
-      <div className="carousel">
-        <img
-          src={imatar}
-          alt=""
-          style={{
-            maxWidth: "100%",
-          }}
-        />
-        <button className="previous">
-          <img src={previous} alt="" />
-        </button>
-        <button className="next">
-          <img src={next} alt="" />
-        </button>
-      </div>
+      <Carousel slides={CarouselData} />
     </div>
   );
 };
