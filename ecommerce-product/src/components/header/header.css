@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   display: flex;
-  overflow-y: hidden;
+  max-width: 100%;
 }
 
 .previous {
@@ -12,13 +12,13 @@
 }
 .slide {
   opacity: 0;
-  transition-duration: 1s ease;
+  transition-duration: 0.5s ease-out;
 }
 
 .slide-active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1.08);
+  transform: scale(1);
 }
 
 .next,
@@ -39,9 +39,22 @@
   user-select: none;
   cursor: pointer;
 }
+.next:hover,
+.previous:hover {
+  width: 7%;
+  height: 7%;
+  opacity: 0.75;
+}
 .next img,
 .previous img {
   max-width: 0.5rem;
+}
+
+.previous:hover img {
+  max-width: 0.75rem;
+}
+.next:hover img {
+  max-width: 0.75rem;
 }
 
 @media screen and (min-width: 1000px) {

@@ -41,7 +41,9 @@ const Nav = () => {
       </div>
 
       <div className="right-nav">
-        <img src={cart} alt="" className="cart" />
+        <div className="cart-wrap">
+          <img src={cart} alt="" className="cart" />
+        </div>
         <img src={avatar} alt="" className="avatar" />
       </div>
     </div>

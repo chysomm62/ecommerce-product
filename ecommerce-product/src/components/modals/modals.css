@@ -1,0 +1,35 @@
+.modal-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  min-height: 250px;
+  position: absolute;
+  top: 15%;
+  left: 2.5%;
+  right: 2%;
+}
+
+.cart-modal {
+  top: 70px;
+  z-index: 100;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.cart-head {
+  padding: 1.25rem 1rem;
+  border-bottom: 1.5px solid var(--Light-grayish-blue);
+  justify-self: flex-start;
+}
+.cart-body {
+  min-height: 180px;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--Dark-grayish-blue);
+  font-weight: 700;
+  padding: 1rem;
+}
