@@ -16,11 +16,14 @@ export const CarouselData = [
   },
   {
     image: image2,
+    thumbnail: thumbnail2,
   },
   {
     image: image3,
+    thumbnail: thumbnail3,
   },
   {
     image: image4,
+    thumbnail: thumbnail4,
   },
 ];
