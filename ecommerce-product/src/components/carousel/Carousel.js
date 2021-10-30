@@ -26,20 +26,25 @@ const Carousel = ({ slides }) => {
       <div className="carousel">
         {CarouselData.map((slide, index) => {
           return (
-            <div
-              className={index === current ? "slide-active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                <img
-                  src={slide.image}
-                  alt=""
-                  style={{
-                    maxWidth: "100%",
-                  }}
-                />
-              )}
-            </div>
+            <>
+              <div
+                className={index === current ? "slide-active" : "slide"}
+                key={index}
+              >
+                {index === current && (
+                  <img
+                    src={slide.image}
+                    alt=""
+                    style={{
+                      maxWidth: "100%",
+                    }}
+                  />
+                )}
+              </div>
+              <div className="thumbnail">
+                <img src={slide.thumbnail} alt="" />
+              </div>
+            </>
           );
         })}
         {/* <img
