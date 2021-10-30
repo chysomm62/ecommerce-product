@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/ecommerce-product-page">
             <Body />
           </Route>
           <Route exact path="/Men">
