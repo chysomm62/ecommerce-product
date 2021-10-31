@@ -56,6 +56,9 @@
 .next:hover img {
   max-width: 0.75rem;
 }
+.thumbnail {
+  display: none;
+}
 
 @media screen and (min-width: 1000px) {
   .carousel img {
@@ -68,5 +71,8 @@
   .next img,
   .previous img {
     display: none;
+  }
+  .thumbnail {
+    display: flex;
   }
 }
