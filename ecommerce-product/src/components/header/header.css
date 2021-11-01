@@ -76,4 +76,14 @@
     display: flex;
     max-width: 100%;
   }
+  .thumbnail div {
+    max-width: 25%;
+  }
+  .thumbnail div img {
+    max-width: 100%;
+    height: auto;
+  }
+  .thumb-active {
+    opacity: 0.5;
+  }
 }

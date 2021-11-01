@@ -15,7 +15,10 @@ const Carousel = ({ slides }) => {
   const prevSlide = () => {
     SetCurrent(current === 0 ? length - 1 : current - 1);
   };
-  console.log(current);
+
+  const byThumbnail = (index) => {
+    SetCurrent(index);
+  };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
@@ -41,25 +44,31 @@ const Carousel = ({ slides }) => {
                   />
                 )}
               </div>
-              <div className="thumbnail">
-                <img src={slide.thumbnail} alt="" />
-              </div>
             </>
           );
         })}
-        {/* <img
-          src={imatar}
-          alt=""
-          style={{
-            maxWidth: "100%",
-          }}
-        /> */}
+
         <button className="previous" onClick={prevSlide}>
           <img src={previous} alt="" />
         </button>
         <button className="next" onClick={nextSlide}>
           <img src={next} alt="" />
         </button>
+      </div>
+      <div className="thumbnail">
+        {CarouselData.map((thumb, index) => {
+          return (
+            <>
+              <div
+                className={index === current ? "thumb-active" : "thumb"}
+                key={index}
+                onClick={() => byThumbnail(index)}
+              >
+                <img src={thumb.thumbnail} alt="" />
+              </div>
+            </>
+          );
+        })}
       </div>
     </>
   );

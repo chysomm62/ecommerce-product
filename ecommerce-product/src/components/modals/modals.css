@@ -6,6 +6,7 @@
   position: absolute;
   top: 15%;
   right: 5%;
+  box-shadow: var(--Dark-grayish-blue) 4px 6px 14px -2px;
 }
 
 .cart-modal {
