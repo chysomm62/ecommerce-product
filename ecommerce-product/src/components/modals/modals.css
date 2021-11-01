@@ -1,12 +1,11 @@
 .modal-wrap {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 350px;
   min-height: 250px;
   position: absolute;
   top: 15%;
-  left: 2.5%;
-  right: 2%;
+  right: 5%;
 }
 
 .cart-modal {
@@ -32,4 +31,7 @@
   color: var(--Dark-grayish-blue);
   font-weight: 700;
   padding: 1rem;
+}
+.hide-modal {
+  display: none;
 }

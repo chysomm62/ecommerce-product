@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import CartModal from "../modals/CartModal";
 import MenuLinks from "./MenuLinks";
 
 // css files
@@ -15,10 +15,12 @@ import close from "../../images/icon-close.svg";
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [modal, setModal] = useState(false);
   return (
     // nav wrap
     <div className="nav">
       <div className="left-nav">
+        {/* hamburger */}
         <button onClick={() => setIsMobile(!isMobile)}>
           {isMobile ? (
             <img src={close} alt="" className="close" />
@@ -26,11 +28,13 @@ const Nav = () => {
             <img src={hamburger} alt="" className="menu" />
           )}
         </button>
+        {/* end of hamburger */}
         <img src={logo} alt="logo" className="logo" />
         <div
           className={isMobile ? "links-active" : "contain-menu-link"}
           onClick={() => setIsMobile(false)}
         >
+          {/* menu links */}
           <div className="menu-links-wrap" onClick={() => setIsMobile(false)}>
             <div className="close">
               <img src={close} alt="" className="close" />
@@ -41,10 +45,15 @@ const Nav = () => {
       </div>
 
       <div className="right-nav">
-        <div className="cart-wrap">
+        {/* cart */}
+        <button className="cart-wrap" onClick={() => setModal(!modal)}>
           <img src={cart} alt="" className="cart" />
-        </div>
+        </button>
+        {/* cart */}
         <img src={avatar} alt="" className="avatar" />
+      </div>
+      <div className={modal ? "modal-wrap" : "hide-modal"}>
+        <CartModal />
       </div>
     </div>
   );

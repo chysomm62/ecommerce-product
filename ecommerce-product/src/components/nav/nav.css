@@ -34,6 +34,12 @@
   align-content: center;
 }
 
+.cart-wrap {
+  border: none;
+  background-color: inherit;
+  outline: none;
+}
+
 .cart {
   padding: 0 1.2rem 0 0;
   /* max-width: 1rem; */
