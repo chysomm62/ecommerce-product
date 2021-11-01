@@ -21,7 +21,12 @@ const Nav = () => {
     <div className="nav">
       <div className="left-nav">
         {/* hamburger */}
-        <button onClick={() => setIsMobile(!isMobile)}>
+        <button
+          onClick={() => setIsMobile(!isMobile)}
+          style={{
+            zIndex: "100",
+          }}
+        >
           {isMobile ? (
             <img src={close} alt="" className="close" />
           ) : (
@@ -36,9 +41,6 @@ const Nav = () => {
         >
           {/* menu links */}
           <div className="menu-links-wrap" onClick={() => setIsMobile(false)}>
-            <div className="close">
-              <img src={close} alt="" className="close" />
-            </div>
             <MenuLinks />
           </div>
         </div>

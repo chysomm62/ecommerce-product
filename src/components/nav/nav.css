@@ -53,6 +53,7 @@
 .avatar {
   max-width: 1.25rem;
   height: auto;
+  border-radius: 50%;
 }
 .avatar:hover {
   border: 2px solid var(--Orange);

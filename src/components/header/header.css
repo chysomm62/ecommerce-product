@@ -12,13 +12,13 @@
 }
 .slide {
   opacity: 0;
-  transition-duration: 0.5s ease-out;
+  transition-duration: 0.5s ease-in;
 }
 
 .slide-active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1);
+  transform: translate(1);
 }
 
 .next,
