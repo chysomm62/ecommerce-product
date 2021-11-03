@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="..public/index.html">
+    <Router basename="/index.html">
       <div className="App">
         <Nav />
         <Switch>
