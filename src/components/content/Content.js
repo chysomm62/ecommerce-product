@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useState } from "react";
 import cart from "../../images/icon-cart.svg";
 import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
@@ -7,38 +6,58 @@ import plus from "../../images/icon-plus.svg";
 import "../../App.css";
 import "./content.css";
 
-const Content = () => {
+const Content = (props) => {
+  const { products, currentQty, setCurrentQty } = props;
+
+  const addOn = () => {
+    setCurrentQty(currentQty + 1);
+  };
+
+  const remove = () => {
+    if (!currentQty <= 0) {
+      setCurrentQty(currentQty - 1);
+    }
+  };
+
   return (
-    <div className="c-div">
-      <h1 className="c-h1">Sneaker Company</h1>
-      <h2 className="c-h2">Fall Limited Edition Sneakers</h2>
-      <p className="c-p">
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
-      </p>
-      <div className="prices">
-        <div>
-          <span>$125.00</span> <span>50%</span>
-        </div>{" "}
-        <p>$250.00</p>
+    <>
+      <div className="c-div">
+        <h1 className="c-h1">Sneaker Company</h1>
+        <h2 className="c-h2">Fall Limited Edition Sneakers</h2>
+        {products.map((product) => {
+          return (
+            <div key={product.id}>
+              <p className="c-p">{product.description}</p>
+              <div className="prices">
+                <div>
+                  <span>{product.price}</span> <span>{product.discount}</span>
+                </div>
+                <p>{product.formerPrice}</p>
+              </div>
+              <div className="quantity-add">
+                <div className="quantity">
+                  <button onClick={() => remove()}>
+                    <img src={minus} alt="" />
+                  </button>
+
+                  <span>{currentQty}</span>
+
+                  <button onClick={() => addOn()}>
+                    <img src={plus} alt="" />
+                  </button>
+                </div>
+
+                <button className="addBtn">
+                  <img src={cart} alt="" />
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          );
+        })}
+        ;
       </div>
-      <div className="quantity-add">
-        <div className="quantity">
-          <button>
-            <img src={minus} alt="" />
-          </button>
-          <span>0</span>
-          <button>
-            <img src={plus} alt="" />
-          </button>
-        </div>
-        <button className="addBtn">
-          <img src={cart} alt="" />
-          <span>Add to cart</span>
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 

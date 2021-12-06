@@ -13,9 +13,11 @@ import cart from "../../images/icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
 import close from "../../images/icon-close.svg";
 
-const Nav = () => {
+const Nav = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [modal, setModal] = useState(false);
+  const { currentQty, setCurrentQty, products } = props;
+
   return (
     // nav wrap
     <div className="nav">
@@ -48,14 +50,23 @@ const Nav = () => {
 
       <div className="right-nav">
         {/* cart */}
-        <button className="cart-wrap" onClick={() => setModal(!modal)}>
-          <img src={cart} alt="" className="cart" />
-        </button>
+        <div>
+          <button className="cart-wrap" onClick={() => setModal(!modal)}>
+            <img src={cart} alt="" className="cart" />
+          </button>
+          {currentQty > 0 && <div>{currentQty}</div>}
+          <div className={modal ? "modal-wrap" : "hide-modal"}>
+            {modal && (
+              <CartModal
+                products={products}
+                currentQty={currentQty}
+                setCurrentQty={setCurrentQty}
+              />
+            )}
+          </div>
+        </div>
         {/* cart */}
         <img src={avatar} alt="" className="avatar" />
-      </div>
-      <div className={modal ? "modal-wrap" : "hide-modal"}>
-        <CartModal />
       </div>
     </div>
   );
